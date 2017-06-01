@@ -7,6 +7,13 @@
 [image1]: ./examples/grayscale.jpg "Grayscale"
 
 ---
+## Original Images
+
+<img src="./test_images/solidWhiteCurve.jpg" width="250" /> <img src="./test_images/solidWhiteRight.jpg" width="250" />
+<img src="./test_images/solidYellowCurve.jpg" width="250" /> <img src="./test_images/solidYellowCurve2.jpg" width="250" />
+<img src="./test_images/solidYellowLeft.jpg" width="250" /> <img src="./test_images/whiteCarLaneSwitch.jpg" width="250" />
+
+---
 ## Color Selection
 
 ### HLS Color Space
