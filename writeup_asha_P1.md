@@ -16,7 +16,12 @@
 ## Color Selection
 
 The following is an example of color selction
-![alt_text][hls1]
+![alt_text][hls1 =150x]
+![alt_text][hls2 =150x]
+![alt_text][hls3 =150x]
+![alt_text][hls4 =150x]
+![alt_text][hls5 =150x]
+![alt_text][hls6 =150x]
 
 ## Writeup Template
 
