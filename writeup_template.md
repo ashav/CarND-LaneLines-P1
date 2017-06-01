@@ -1,5 +1,11 @@
 # **Finding Lane Lines on the Road** 
 
+### Color Selection
+
+![alt_text][hls1]
+
+---
+
 ## Writeup Template
 
 ### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
@@ -16,6 +22,13 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
+[hls1]: ./test_images_ouput/solidWhiteCurve_hls.jpg
+[hls2]: ./test_images_ouput/solidWhiteRight_hls.jpg
+[hls3]: ./test_images_ouput/solidYellowCurve_hls.jpg
+[hls4]: ./test_images_ouput/solidYellowCurve2_hls.jpg
+[hls5]: ./test_images_ouput/solidYellowLeft_hls.jpg
+[hls6]: ./test_images_ouput/whiteCarLaneSwitch_hls.jpg
+
 
 ---
 

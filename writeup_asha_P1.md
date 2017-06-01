@@ -5,12 +5,12 @@
 [//]: # (Image References)
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
-[hls1]: ./test_images_ouput/solidWhiteCurve_hls.jpg?raw=true "solidWhiteCurve HLS"
-[hls2]: ./test_images_ouput/solidWhiteRight_hls.jpg "solidWhiteRight HLS"
-[hls3]: ./test_images_ouput/solidYellowCurve_hls.jpg "solidYellowCurve HLS"
-[hls4]: ./test_images_ouput/solidYellowCurve2_hls.jpg "solidYellowCurve2 HLS"
-[hls5]: ./test_images_ouput/solidYellowLeft_hls.jpg "solidYellowLeft HLS"
-[hls6]: ./test_images_ouput/whiteCarLaneSwitch_hls.jpg "whiteCarLaneSwitch HLS"
+[hls1]: ./test_images_output/solidWhiteCurve_hls.jpg "solidWhiteCurve HLS"
+[hls2]: ./test_images_output/solidWhiteRight_hls.jpg "solidWhiteRight HLS"
+[hls3]: ./test_images_output/solidYellowCurve_hls.jpg "solidYellowCurve HLS"
+[hls4]: ./test_images_output/solidYellowCurve2_hls.jpg "solidYellowCurve2 HLS"
+[hls5]: ./test_images_output/solidYellowLeft_hls.jpg "solidYellowLeft HLS"
+[hls6]: ./test_images_output/whiteCarLaneSwitch_hls.jpg "whiteCarLaneSwitch HLS"
 
 ---
 ## Color Selection
