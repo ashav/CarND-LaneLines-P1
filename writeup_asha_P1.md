@@ -23,6 +23,8 @@ The following is an example of color selction
 ![alt_text][hls5 =150x]
 ![alt_text][hls6 =150x]
 
+<img src="./test_images_output/solidWhiteCurve_hls.jpg" style="width:200px;" />
+
 ## Writeup Template
 
 ### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
