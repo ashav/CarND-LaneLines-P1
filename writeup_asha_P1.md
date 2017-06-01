@@ -23,7 +23,7 @@ The following is an example of color selction
 ![alt_text][hls5 =150x]
 ![alt_text][hls6 =150x]
 
-<img src="./test_images_output/solidWhiteCurve_hls.jpg" style="width:200px;" />
+<img src="./test_images_output/solidWhiteCurve_hls.jpg" width="200" />
 
 ## Writeup Template
 
