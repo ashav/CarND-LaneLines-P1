@@ -16,14 +16,25 @@
 ## Color Selection
 
 The following is an example of color selction
-![alt_text][hls1 =150x]
-![alt_text][hls2 =150x]
-![alt_text][hls3 =150x]
-![alt_text][hls4 =150x]
-![alt_text][hls5 =150x]
-![alt_text][hls6 =150x]
 
-<img src="./test_images_output/solidWhiteCurve_hls.jpg" width="200" />
+<img src="./test_images_output/solidWhiteCurve_hls.jpg" width="250" />
+<img src="./test_images_output/solidWhiteRight_hls.jpg" width="250" />
+<img src="./test_images_output/solidYellowCurve_hls.jpg" width="250" />
+<img src="./test_images_output/solidYellowCurve2_hls.jpg" width="250" />
+<img src="./test_images_output/solidYellowLeft_hls.jpg" width="250" />
+<img src="./test_images_output/whiteCarLaneSwitch_hls.jpg" width="250" />
+
+The following are images with HSV
+
+<img src="./test_images_output/solidWhiteCurve_hsv.jpg" width="250" />
+<img src="./test_images_output/solidWhiteRight_hsv.jpg" width="250" />
+<img src="./test_images_output/solidYellowCurve_hsv.jpg" width="250" />
+<img src="./test_images_output/solidYellowCurve2_hsv.jpg" width="250" />
+<img src="./test_images_output/solidYellowLeft_hsv.jpg" width="250" />
+<img src="./test_images_output/whiteCarLaneSwitch_hsv.jpg" width="250" />
+
+
+
 
 ## Writeup Template
 
