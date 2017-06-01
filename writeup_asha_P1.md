@@ -16,6 +16,10 @@
 ---
 ## Color Selection
 
+### RGB Color Space
+
+While white is relatively easy to segment in the RGB domain (e.g. values in range [190,190,190] to [255,255,255]), yellow is harder. Pure yellow in the RGB space is [255,255,0]. However it gets harder to easily represent the other grades of yellow. So we look at alternate color spaces.
+
 ### HLS Color Space
 
 HSL stands for _hue_, _saturation_ and _luminosity_. More details on HLS and HSV color spaces are here at [Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV)
