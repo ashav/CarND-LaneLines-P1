@@ -17,12 +17,9 @@ The following is an example of color selction
 
 The following are images with HSV
 
-<img src="./test_images_output/solidWhiteCurve_hsv.jpg" width="250" />
-<img src="./test_images_output/solidWhiteRight_hsv.jpg" width="250" />
-<img src="./test_images_output/solidYellowCurve_hsv.jpg" width="250" />
-<img src="./test_images_output/solidYellowCurve2_hsv.jpg" width="250" />
-<img src="./test_images_output/solidYellowLeft_hsv.jpg" width="250" />
-<img src="./test_images_output/whiteCarLaneSwitch_hsv.jpg" width="250" />
+<img src="./test_images_output/solidWhiteCurve_hsv.jpg" width="250" /><img src="./test_images_output/solidWhiteRight_hsv.jpg" width="250" />
+<img src="./test_images_output/solidYellowCurve_hsv.jpg" width="250" /><img src="./test_images_output/solidYellowCurve2_hsv.jpg" width="250" />
+<img src="./test_images_output/solidYellowLeft_hsv.jpg" width="250" /><img src="./test_images_output/whiteCarLaneSwitch_hsv.jpg" width="250" />
 
 
 
