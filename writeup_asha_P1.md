@@ -9,13 +9,21 @@
 ---
 ## Color Selection
 
-The following is an example of color selction
+### HLS Color Space
+
+HSL stands for _hue_, _saturation_ and _luminosity_. More details on HLS and HSV color spaces are here at [Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV)
+
+As shown below, both yellow and white lines are clearly visible in the HLS color space.
 
 <img src="./test_images_output/solidWhiteCurve_hls.jpg" width="250" /> <img src="./test_images_output/solidWhiteRight_hls.jpg" width="250" />
 <img src="./test_images_output/solidYellowCurve_hls.jpg" width="250" /> <img src="./test_images_output/solidYellowCurve2_hls.jpg" width="250" />
 <img src="./test_images_output/solidYellowLeft_hls.jpg" width="250" /> <img src="./test_images_output/whiteCarLaneSwitch_hls.jpg" width="250" />
 
-The following are images with HSV
+### HSV Color Space
+
+HSV stands for _hue_, _saturation_ and _value_. Same link as above.
+
+Unlike HSL color space, while yellow is clearly visible, white lines are not as sharp in HSV color space.
 
 <img src="./test_images_output/solidWhiteCurve_hsv.jpg" width="250" /> <img src="./test_images_output/solidWhiteRight_hsv.jpg" width="250" />
 <img src="./test_images_output/solidYellowCurve_hsv.jpg" width="250" /> <img src="./test_images_output/solidYellowCurve2_hsv.jpg" width="250" />
