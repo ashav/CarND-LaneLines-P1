@@ -5,6 +5,11 @@
 [//]: # (Image References)
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
+---
+## Pipeline
+
+The following pipeline has been created.
+1. Color Selection
 
 ---
 ## Original Images
