@@ -25,6 +25,10 @@ The following pipeline has been created.
 
 White color is relatively easy to segment in the RGB domain (e.g. values in range [190,190,190] to [255,255,255]). Yellow is harder in the RGB space (Pure yellow in the RGB space is [255,255,0]). Especially to create a simple filter to discover different shades of yellow. So we look at alternate color spaces.
 
+<img src="./test_images_output/solidWhiteCurve_color_select_rgb.jpg" width="250" /> <img src="./test_images_output/solidWhiteRight_color_select_rgb.jpg" width="250" />
+<img src="./test_images_output/solidYellowCurve_color_select_rgb.jpg" width="250" /> <img src="./test_images_output/solidYellowCurve2_color_select_rgb.jpg" width="250" />
+<img src="./test_images_output/solidYellowLeft_color_select_rgb.jpg" width="250" /> <img src="./test_images_output/whiteCarLaneSwitch_color_select_rgb.jpg" width="250" />
+
 ### HLS Color Space
 
 HSL stands for _hue_, _saturation_ and _luminosity_. More details on HLS and HSV color spaces are here at [Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV)
@@ -51,9 +55,9 @@ Here we combine RGB space based color selection for white colors and HLS based c
  Combining the two masks, the following color selection is obtained.
  
  
-<img src="./test_images_output/solidWhiteCurve_color_select.jpg" width="250" /> <img src="./test_images_output/solidWhiteRight_color_select.jpg" width="250" />
-<img src="./test_images_output/solidYellowCurve_color_select.jpg" width="250" /> <img src="./test_images_output/solidYellowCurve2_color_select.jpg" width="250" />
-<img src="./test_images_output/solidYellowLeft_color_select.jpg" width="250" /> <img src="./test_images_output/whiteCarLaneSwitch_color_select.jpg" width="250" />
+<img src="./test_images_output/solidWhiteCurve_color_select_hls.jpg" width="250" /> <img src="./test_images_output/solidWhiteRight_color_select_hls.jpg" width="250" />
+<img src="./test_images_output/solidYellowCurve_color_select_hls.jpg" width="250" /> <img src="./test_images_output/solidYellowCurve2_color_select_hls.jpg" width="250" />
+<img src="./test_images_output/solidYellowLeft_color_select_hls.jpg" width="250" /> <img src="./test_images_output/whiteCarLaneSwitch_color_select_hls.jpg" width="250" />
 
 
 
