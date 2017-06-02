@@ -23,7 +23,7 @@ The following pipeline has been created.
 
 ### RGB Color Space
 
-White color is relatively easy to segment in the RGB domain (e.g. values in range [190,190,190] to [255,255,255]). Yellow is harder in the RGB space (Pure yellow in the RGB space is [255,255,0]). Especially to create a simple filter to discover different shades of yellow. So we look at alternate color spaces.
+The following are the color selection bitmaps for the RGB color space. White color is relatively easy to segment in the RGB domain (e.g. values in range [190,190,190] to [255,255,255]). Yellow is harder in the RGB space (Pure yellow in the RGB space is [255,255,0]). As shown below, white works well, but yellow does not. Also as the RGB color space is additive and does not separate luminance and chrominance, there could be issues as it gets darker. So we explore alternate color spaces.
 
 <img src="./test_images_output/solidWhiteCurve_color_select_rgb.jpg" width="250" /> <img src="./test_images_output/solidWhiteRight_color_select_rgb.jpg" width="250" />
 <img src="./test_images_output/solidYellowCurve_color_select_rgb.jpg" width="250" /> <img src="./test_images_output/solidYellowCurve2_color_select_rgb.jpg" width="250" />
@@ -49,11 +49,11 @@ Unlike HSL color space, while yellow is clearly visible, white lines are not as 
 <img src="./test_images_output/solidYellowCurve_hsv.jpg" width="250" /> <img src="./test_images_output/solidYellowCurve2_hsv.jpg" width="250" />
 <img src="./test_images_output/solidYellowLeft_hsv.jpg" width="250" /> <img src="./test_images_output/whiteCarLaneSwitch_hsv.jpg" width="250" />
 
-### Color Selection Bitmaps
+### HLS Color Selection Bitmaps
 
-Here we combine RGB space based color selection for white colors and HLS based color selection for yellow colors. For yellow hue is selected between 10 and 40, luminosity has no effect on the color and saturation is selected between 100 and 255.
- Combining the two masks, the following color selection is obtained.
+Here we use color selection in the HLS color space. For yellow color, we restrict Hue to be in the range 10-40. There is no effect on luminance and we use Saturation between 100 and 255 to not deal with darker shades. For white, we make sure that luminance is high (between 200 and 255) while hue and saturation have no effect.
  
+ Compared to RGB color space, HLS does a much better job selecting yellow colors.  We stick to HLS color space going forward.
  
 <img src="./test_images_output/solidWhiteCurve_color_select_hls.jpg" width="250" /> <img src="./test_images_output/solidWhiteRight_color_select_hls.jpg" width="250" />
 <img src="./test_images_output/solidYellowCurve_color_select_hls.jpg" width="250" /> <img src="./test_images_output/solidYellowCurve2_color_select_hls.jpg" width="250" />
