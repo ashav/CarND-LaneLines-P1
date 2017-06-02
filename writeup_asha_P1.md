@@ -18,7 +18,7 @@
 
 ### RGB Color Space
 
-While white is relatively easy to segment in the RGB domain (e.g. values in range [190,190,190] to [255,255,255]), yellow is harder. Pure yellow in the RGB space is [255,255,0]. However it gets harder to easily represent the other grades of yellow. So we look at alternate color spaces.
+White color is relatively easy to segment in the RGB domain (e.g. values in range [190,190,190] to [255,255,255]). Yellow is harder in the RGB space (Pure yellow in the RGB space is [255,255,0]). Especially to create a simple filter to discover different shades of yellow. So we look at alternate color spaces.
 
 ### HLS Color Space
 
@@ -34,7 +34,7 @@ As shown below, both yellow and white lines are clearly visible in the HLS color
 
 HSV stands for _hue_, _saturation_ and _value_. Same link as above.
 
-Unlike HSL color space, while yellow is clearly visible, white lines are not as sharp in HSV color space.
+Unlike HSL color space, while yellow is clearly visible, white lines are not as sharp in HSV color space. So between HSL and HSV color space, we select HSL color space to filter yellow shades.  
 
 <img src="./test_images_output/solidWhiteCurve_hsv.jpg" width="250" /> <img src="./test_images_output/solidWhiteRight_hsv.jpg" width="250" />
 <img src="./test_images_output/solidYellowCurve_hsv.jpg" width="250" /> <img src="./test_images_output/solidYellowCurve2_hsv.jpg" width="250" />
@@ -42,12 +42,13 @@ Unlike HSL color space, while yellow is clearly visible, white lines are not as 
 
 ### Color Selection Bitmaps
 
-
+Here we combine RGB space based color selection for white colors and HLS based color selection for yellow colors. For yellow hue is selected between 10 and 40, luminosity has no effect on the color and saturation is selected between 100 and 255.
+ Combining the two masks, the following color selection is obtained.
+ 
+ 
 <img src="./test_images_output/solidWhiteCurve_color_select.jpg" width="250" /> <img src="./test_images_output/solidWhiteRight_color_select.jpg" width="250" />
 <img src="./test_images_output/solidYellowCurve_color_select.jpg" width="250" /> <img src="./test_images_output/solidYellowCurve2_color_select.jpg" width="250" />
 <img src="./test_images_output/solidYellowLeft_color_select.jpg" width="250" /> <img src="./test_images_output/whiteCarLaneSwitch_color_select.jpg" width="250" />
-
-
 
 
 
