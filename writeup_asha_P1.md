@@ -40,6 +40,14 @@ Unlike HSL color space, while yellow is clearly visible, white lines are not as 
 <img src="./test_images_output/solidYellowCurve_hsv.jpg" width="250" /> <img src="./test_images_output/solidYellowCurve2_hsv.jpg" width="250" />
 <img src="./test_images_output/solidYellowLeft_hsv.jpg" width="250" /> <img src="./test_images_output/whiteCarLaneSwitch_hsv.jpg" width="250" />
 
+### Color Selection Bitmaps
+
+
+<img src="./test_images_output/solidWhiteCurve_color_select.jpg" width="250" /> <img src="./test_images_output/solidWhiteRight_color_select.jpg" width="250" />
+<img src="./test_images_output/solidYellowCurve_color_select.jpg" width="250" /> <img src="./test_images_output/solidYellowCurve2_color_select.jpg" width="250" />
+<img src="./test_images_output/solidYellowLeft_color_select.jpg" width="250" /> <img src="./test_images_output/whiteCarLaneSwitch_color_select.jpg" width="250" />
+
+
 
 
 
