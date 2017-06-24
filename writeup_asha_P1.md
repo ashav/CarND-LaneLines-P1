@@ -10,6 +10,8 @@
 
 The following pipeline has been created.
 1. Color Selection
+2. Test on markdown
+3. XYZ
 
 ---
 ## Original Images
