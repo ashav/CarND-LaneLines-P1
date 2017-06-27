@@ -1,7 +1,7 @@
 # **Finding Lane Lines on the Road**
 ---
 
-Final Jupyter notebook for the project submission is [here](https://github.com/ashav/CarND-LaneLines-P1/blob/master/writeup_asha_P1.md).
+Final Jupyter notebook for the project submission is [here](https://github.com/ashav/CarND-LaneLines-P1/blob/master/P1-asha.ipynb).
 
 ---
 # Introduction
