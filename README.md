@@ -1,4 +1,4 @@
-# **Finding Lane Lines on the Road**
+# **Lane Finding Project - Udacity SDC Term 1**
 ---
 
 Final Jupyter notebook for the project submission is [here](https://github.com/ashav/CarND-LaneLines-P1/blob/master/P1-asha.ipynb).
