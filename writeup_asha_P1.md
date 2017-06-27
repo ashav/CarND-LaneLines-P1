@@ -152,33 +152,43 @@ the pipeline described above
 <img src="./test_images_output/final_pipeline_3.png" width="250" /> <img src="./test_images_output/final_pipeline_4.png" width="250" />
 <img src="./test_images_output/final_pipeline_5.png" width="250" /> <img src="./test_images_output/final_pipeline_6.png" width="250" />
 
-1. [Final Video - solidWhiteRight](https://youtu.be/q77C460FXCs)
-2. [Final Video - solidYellowLeft](https://youtu.be/KwJKFVvGKU8)
-3. [Final Video - challenge](https://youtu.be/Bt2AmrS9bXo)
+1. [Final Video - solidWhiteRight (YouTube)](https://youtu.be/q77C460FXCs)
+2. [Final Video - solidYellowLeft (YouTube)](https://youtu.be/KwJKFVvGKU8)
+3. [Final Video - challenge (YouTube)](https://youtu.be/Bt2AmrS9bXo)
 
+---
 # Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+The pipeline has been described above. Now, I will discuss potential 
+shortcomings of the current pipeline and possible improvements.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I ....
+## Potential Shortcomings of Current Pipeline
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+The pipeline works quite well with the sample images provided. However, 
+there are still some issues with the videos - most importantly with the
+Challenge Video.
 
-If you'd like to include images to show how the pipeline works, here is how to include an image:
+1. The final lane markings are a bit jittery as the video plays. The lane
+finding is done on each image frame separately and the slope varies a
+little bit. The transition is not as smooth as I would like. This effect is
+exaggerated in the Challenge video.
 
-![alt text][image1]
+2. Initially, the Challenge video had a lot of errors. For example, the 
+bridge marking was causing the right lane marker to shift. This was
+taken care of by making the modified Draw_Lines function stricter in terms
+of discarding any lines whose slope is less than 0.4. The final Challenge video performs
+quite reasonably well except for some issues with the left yellow marker
+shifting due to the shadows caused by the tree (image below).
+
+<img src="./test_images_output/tree_shadows.jpg" width="250" />
 
 
-### 2. Identify potential shortcomings with your current pipeline
+## Possible Improvements to Current Pipeline
 
+1. Reduce the lane market jitter in the video sequence by persisting the slope
+of the lanes from the previous frame to the next frame. Maybe average
+the slope of the previous frame and the current frame to get to the 
+final lane marker.
 
-One potential shortcoming would be what would happen when ...
-
-Another shortcoming could be ...
-
-
-### 3. Suggest possible improvements to your pipeline
-
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+2. Make the pipeline more resilient to natural elements such as tree shadows
+and lighter road areas with better image processing.
