@@ -148,8 +148,8 @@ region of interest. At the bottom of the image, this touches the image boundary.
 The following images and videos show the final outputs after running through
 the pipeline described above
 
-<img src="./test_images_output/final_pipeline_1.png" width="250" /> <img src="./test_images_output/final_pipeline_2.png.jpg" width="250" />
-<img src="./test_images_output/final_pipeline_3.png.jpg" width="250" /> <img src="./test_images_output/final_pipeline_4.png" width="250" />
+<img src="./test_images_output/final_pipeline_1.png" width="250" /> <img src="./test_images_output/final_pipeline_2.png" width="250" />
+<img src="./test_images_output/final_pipeline_3.png" width="250" /> <img src="./test_images_output/final_pipeline_4.png" width="250" />
 <img src="./test_images_output/final_pipeline_5.png" width="250" /> <img src="./test_images_output/final_pipeline_6.png" width="250" />
 
 
