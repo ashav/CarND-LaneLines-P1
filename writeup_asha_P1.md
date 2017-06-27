@@ -1,27 +1,38 @@
 # **Finding Lane Lines on the Road**
 
 ---
+# Introduction
 
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
----
-## Pipeline
-
-The following pipeline has been created.
-1. Color Selection
-2. Test on markdown
-3. XYZ
-
----
-## Original Images
+The purpose of this project was to develop a lane finding pipeline and apply it 
+to a series of images (shown below) as well as to three video streams (two normal and
+one challenge video). The report below explains my pipeline as well as reflections about issues I faced
+as well as possible improvement suggestions.
 
 <img src="./test_images/solidWhiteCurve.jpg" width="250" /> <img src="./test_images/solidWhiteRight.jpg" width="250" />
 <img src="./test_images/solidYellowCurve.jpg" width="250" /> <img src="./test_images/solidYellowCurve2.jpg" width="250" />
 <img src="./test_images/solidYellowLeft.jpg" width="250" /> <img src="./test_images/whiteCarLaneSwitch.jpg" width="250" />
 
 ---
-## Color Selection
+
+# Pipeline
+
+My pipeline consisted of the following steps:
+
+1. Color Selection of Yellow and White Lanes 
+2. Combining the above Color Selection Mask and GrayScale Image to form a Boosted Image
+3. Gaussian Blur
+4. Canny Edge Detection
+5. Region of Interest Selection
+6. Hough Transform
+7. Improved DrawLines
+
+These steps are described in detail below.
+---
+
+## Step 1 - Color Selection of Yellow and White Lane Markers
+
+The first step consisted of identifying yellow and white lane markers by processing in the color
+space. To do this, I experimented with three color spaces.
 
 ### RGB Color Space
 
@@ -61,7 +72,8 @@ Here we use color selection in the HLS color space. For yellow color, we restric
 <img src="./test_images_output/solidYellowCurve_color_select_hls.jpg" width="250" /> <img src="./test_images_output/solidYellowCurve2_color_select_hls.jpg" width="250" />
 <img src="./test_images_output/solidYellowLeft_color_select_hls.jpg" width="250" /> <img src="./test_images_output/whiteCarLaneSwitch_color_select_hls.jpg" width="250" />
 
-
+At this point we end up with the color masks shown above.
+---
 
 ## Writeup Template
 
