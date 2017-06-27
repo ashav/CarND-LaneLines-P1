@@ -152,7 +152,9 @@ the pipeline described above
 <img src="./test_images_output/final_pipeline_3.png" width="250" /> <img src="./test_images_output/final_pipeline_4.png" width="250" />
 <img src="./test_images_output/final_pipeline_5.png" width="250" /> <img src="./test_images_output/final_pipeline_6.png" width="250" />
 
-
+1. [Final Video - solidWhiteRight](https://youtu.be/q77C460FXCs)
+2. [Final Video - solidYellowLeft](https://youtu.be/KwJKFVvGKU8)
+3. [Final Video - challenge](https://youtu.be/Bt2AmrS9bXo)
 
 # Reflection
 
