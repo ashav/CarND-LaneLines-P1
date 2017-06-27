@@ -1,4 +1,7 @@
 # **Finding Lane Lines on the Road**
+---
+
+Final Jupyter notebook for the project submission is [here](https://github.com/ashav/CarND-LaneLines-P1/blob/master/writeup_asha_P1.md).
 
 ---
 # Introduction
@@ -81,7 +84,7 @@ grayscale image to create a boosted image to send to the edge detection step. Fo
 two images below show the comparison between grayscale only (left) and the boosted grayscale (right).
 
 
-<img src="./test_images_output/grayscale_only.png" width="250" /> <img src="./test_images_output/boosted_grayscale.png" width="250" />
+<img src="./test_images_output/grayscale_only.png" width="300" /> <img src="./test_images_output/boosted_grayscale.png" width="300" />
 
 ---
 ## Step 3 - Gaussian Blur
@@ -91,7 +94,7 @@ a kernel size of 5. This step is carried out to reduce overall noise in the imag
 to reduce detail. This should eliminate weak edges getting detected in the next step. See sample image
 below after gaussian blur.
 
-<img src="./test_images_output/gaussian_blur.png" width="250" />
+<img src="./test_images_output/gaussian_blur.png" width="300" />
 
 ---
 ## Step 4 - Canny Edge Detection
@@ -99,14 +102,14 @@ below after gaussian blur.
 The next step consisted of the Canny Edge Detection Method. I used a low threshold of 
 60 and a high threshold of 150 after some experimentation.
 
-<img src="./test_images_output/canny_edge.png" width="250" />
+<img src="./test_images_output/canny_edge.png" width="300" />
 
 ---
 ## Step 5 - Region of Interest Selection
 
 The next step is to limit the edges to a well-defined area of interest. In my case, a sample image
 looked as follows.
-<img src="./test_images_output/region_of_interest.png" width="250" />
+<img src="./test_images_output/region_of_interest.png" width="300" />
 
 ---
 ## Step 6 - Hough Transform
@@ -118,7 +121,7 @@ provided by Udacity. After some experimentation, I chose the following parameter
 Rho = 3, Theta of 1 degree, Threshold of 70, Minumum_Line_length = 80 (to disregard small lines) and 
 Maximum_Line_Gap of 250 (to force lines to join together).
 
-<img src="./test_images_output/hough_before_1.png" width="250" /> <img src="./test_images_output/hough_before_2.png" width="250" />
+<img src="./test_images_output/hough_before_1.png" width="300" /> <img src="./test_images_output/hough_before_2.png" width="300" />
 
 ---
 
@@ -139,7 +142,7 @@ step, find the intercepts for the line at the boundaries defined by the
 region of interest. At the bottom of the image, this touches the image boundary.
 6. Use a thicker line (purely aesthetic).
 
-<img src="./test_images_output/hough_after_1.png" width="250" /> <img src="./test_images_output/hough_after_2.png" width="250" />
+<img src="./test_images_output/hough_after_1.png" width="300" /> <img src="./test_images_output/hough_after_2.png" width="300" />
 
 ---
 
@@ -180,7 +183,7 @@ of discarding any lines whose slope is less than 0.4. The final Challenge video 
 quite reasonably well except for some issues with the left yellow marker
 shifting due to the shadows caused by the tree (image below).
 
-<img src="./test_images_output/tree_shadows.jpg" width="250" />
+<img src="./test_images_output/tree_shadows.jpg" width="300" />
 
 
 ## Possible Improvements to Current Pipeline
@@ -191,4 +194,6 @@ the slope of the previous frame and the current frame to get to the
 final lane marker.
 
 2. Make the pipeline more resilient to natural elements such as tree shadows
-and lighter road areas with better image processing.
+and lighter road areas with better image processing. Potentially other elements
+such as shadows of nearby cars and urban scenes can also create issues with
+lane finding.
