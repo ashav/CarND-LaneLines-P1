@@ -30,6 +30,7 @@ My pipeline consisted of the following steps:
 7. Improved DrawLines
 
 These steps are described in detail below.
+
 ---
 
 ## Step 1 - Color Selection of Yellow and White Lane Markers
