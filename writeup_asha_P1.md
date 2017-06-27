@@ -92,6 +92,7 @@ to reduce detail. This should eliminate weak edges getting detected in the next 
 below after gaussian blur.
 
 <img src="./test_images_output/gaussian_blur.png" width="250" />
+
 ---
 ## Step 4 - Canny Edge Detection
 
@@ -141,6 +142,17 @@ region of interest. At the bottom of the image, this touches the image boundary.
 <img src="./test_images_output/hough_after_1.png" width="250" /> <img src="./test_images_output/hough_after_2.png" width="250" />
 
 ---
+
+# Final Outputs
+
+The following images and videos show the final outputs after running through
+the pipeline described above
+
+<img src="./test_images_output/final_pipeline_1.png" width="250" /> <img src="./test_images_output/final_pipeline_2.png.jpg" width="250" />
+<img src="./test_images_output/final_pipeline_3.png.jpg" width="250" /> <img src="./test_images_output/final_pipeline_4.png" width="250" />
+<img src="./test_images_output/final_pipeline_5.png" width="250" /> <img src="./test_images_output/final_pipeline_6.png" width="250" />
+
+
 
 # Reflection
 
