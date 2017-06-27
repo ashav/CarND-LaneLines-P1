@@ -66,31 +66,83 @@ Unlike HSL color space, while yellow is clearly visible, white lines are not as 
 
 Here we use color selection in the HLS color space. For yellow color, we restrict Hue to be in the range 10-40. There is no effect on luminance and we use Saturation between 100 and 255 to not deal with darker shades. For white, we make sure that luminance is high (between 200 and 255) while hue and saturation have no effect.
  
- Compared to RGB color space, HLS does a much better job selecting yellow colors.  We stick to HLS color space going forward.
+ Compared to RGB color space, HLS does a much better job selecting yellow colors. However, RGB color space is better for white. For this pipeline, we chose HSV. However choosing white in RGB and yellow in HLS could have been better. At this point we end up with the following color masks for detecting yellow and white lane markers.
  
 <img src="./test_images_output/solidWhiteCurve_color_select_hls.jpg" width="250" /> <img src="./test_images_output/solidWhiteRight_color_select_hls.jpg" width="250" />
 <img src="./test_images_output/solidYellowCurve_color_select_hls.jpg" width="250" /> <img src="./test_images_output/solidYellowCurve2_color_select_hls.jpg" width="250" />
 <img src="./test_images_output/solidYellowLeft_color_select_hls.jpg" width="250" /> <img src="./test_images_output/whiteCarLaneSwitch_color_select_hls.jpg" width="250" />
 
-At this point we end up with the color masks shown above.
 ---
 
-## Writeup Template
+## Step 2 - Combining Above Mask and Grayscale image.
 
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
+Rather than just use grayscale image, I combined the above lane detection mask along with the 
+grayscale image to create a boosted image to send to the edge detection step. For example, the
+two images below show the comparison between grayscale only (left) and the boosted grayscale (right).
+
+
+<img src="./test_images_output/grayscale_only.png" width="250" /> <img src="./test_images_output/boosted_grayscale.png" width="250" />
+
+---
+## Step 3 - Gaussian Blur
+
+The next step is to run the boosted grayscale images through a Gaussian Blur filter. I have selected
+a kernel size of 5. This step is carried out to reduce overall noise in the image and
+to reduce detail. This should eliminate weak edges getting detected in the next step. See sample image
+below after gaussian blur.
+
+<img src="./test_images_output/gaussian_blur.png" width="250" />
+---
+## Step 4 - Canny Edge Detection
+
+The next step consisted of the Canny Edge Detection Method. I used a low threshold of 
+60 and a high threshold of 150 after some experimentation.
+
+<img src="./test_images_output/canny_edge.png" width="250" />
+
+---
+## Step 5 - Region of Interest Selection
+
+The next step is to limit the edges to a well-defined area of interest. In my case, a sample image
+looked as follows.
+<img src="./test_images_output/region_of_interest.png" width="250" />
+
+---
+## Step 6 - Hough Transform
+
+Finally, I applied the hough transform on the image above. Restricting it to 
+the region of interest obviously negates other random lines being discovered
+in the image. The following hough transform was using the Draw-Lines function
+provided by Udacity. After some experimentation, I chose the following parameters:
+Rho = 3, Theta of 1 degree, Threshold of 70, Minumum_Line_length = 80 (to disregard small lines) and 
+Maximum_Line_Gap of 250 (to force lines to join together).
+
+<img src="./test_images_output/hough_before_1.png" width="250" /> <img src="./test_images_output/hough_before_2.png" width="250" />
 
 ---
 
-**Finding Lane Lines on the Road**
+## Step 7 - Improved DrawLines Function
 
-The goals / steps of this project are the following:
-* Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
+At this juncture, I worked on improving the draw lines function. The new algorithm
+worked as follows:
+1. For each line detected by the hough transform, find its slope. 
+2. Discard lines below minimum slope: If the slope is too small (in my
+case, I experimented minimum slope to be abything from 0.2 to 0.4). I finally chose 0.4 to be the minimum
+slope as it performed better for the Challenge Video (see below in reflections).
+3. For lines with slope bigger than minimum slope, categorize them to either left lane or
+right lane based on the slope sign (positive or negative).
+4. For all the lines that are part of the left hand lane, find one single line passing 
+through them using the Numpy Polyfit function. Same for right hand lane.
+5. Using the line coefficients (slope, intercept) selected in the above 
+step, find the intercepts for the line at the boundaries defined by the
+region of interest. At the bottom of the image, this touches the image boundary.
+6. Use a thicker line (purely aesthetic).
 
+<img src="./test_images_output/hough_after_1.png" width="250" /> <img src="./test_images_output/hough_after_2.png" width="250" />
 
 ---
 
-### Reflection
+# Reflection
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
